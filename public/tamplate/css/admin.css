@@ -1,0 +1,115 @@
+body {
+    background-color: #efecec;
+}
+.sidebar {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 250px;
+    background-color: #432874;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.sidebar.collapsed {
+    width: 80px;
+}
+.sidebar a,
+.sidebar .nav-link {
+    font-size: 15px;
+    color: #FFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 20px 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.sidebar a:hover,
+.sidebar .nav-link:hover {
+    background-color: #B4D51E; 
+    color: #efecec;
+    border-radius: 10px;
+}
+.sidebar.collapsed a span,
+.sidebar.collapsed .nav-link span {
+    display: none;
+}
+.sidebar.collapsed h4 {
+    display: none;
+}
+.sidebar.collapsed a {
+    justify-content: center;
+    padding: 20px 20px;
+    font-size: 15px;
+}
+.sidebar.collapsed .nav-link{
+    justify-content: center;
+    padding: 20px 10px;
+    font-size: 15px;
+}
+.icon-large {
+    font-size: 25px;
+  }
+.toggle-btn {
+    font-size: 25px;
+    margin: 2px 0 0 21px;
+    background-color: #432874;
+    color: #FFF;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.toggle-btn:hover {
+    /* background-color: #B4D51E; */
+    color: #efecec;
+}
+.sidebar.collapsed button{
+    margin: 2px 0 0 7px;
+}
+.button{
+    display: flex;
+}
+.judul{
+    margin-top: 15px
+}
+.nama{
+    margin-left: 10px;
+}
+.card {
+    background-color: #efecec;
+    border-color: #B4D51E;
+}
+.card-header {
+    background-color: #432874;
+    color: #B4D51E;
+}
+.btn-primary {
+    background-color: #432874;
+    border-color: #432874;
+}
+.btn-primary:hover {
+    background-color: #B4D51E;
+    border-color: #B4D51E;
+    color: #432874;
+}
+.btn-danger {
+    background-color: #B4D51E;
+    border-color: #B4D51E;
+    color: #432874;
+}
+.btn-danger:hover {
+    background-color: #432874;
+    border-color: #432874;
+    color: #B4D51E;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    border: #432874 1.5px solid;
+    border-radius: 100%;
+}
