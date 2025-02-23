@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -11,7 +10,4 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::middleware(['auth'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
-    Route::post('/order', [OrderController::class, 'store'])->name('checkout');
-    Route::get('/orders/show', [OrderController::class, 'show'])->name('orders.show');
 });

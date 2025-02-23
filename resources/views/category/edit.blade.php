@@ -2,7 +2,7 @@
 <div class="modal fade" id="editCategoryModal-{{ $category->id }}" tabindex="-1" aria-labelledby="editCategoryLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="{{ route('categories.update', $category->id) }}" method="POST">
+            <form action="{{ route('admin-categories.update', $category->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="modal-header">

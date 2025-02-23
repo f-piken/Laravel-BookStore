@@ -38,7 +38,7 @@
                                     Edit
                                 </button>
                                 <!-- Delete Button -->
-                                <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display: inline-block;">
+                                <form action="{{ route('admin-categories.destroy', $category->id) }}" method="POST" style="display: inline-block;">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger btn-sm" type="submit" 

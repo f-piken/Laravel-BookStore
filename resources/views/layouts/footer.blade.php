@@ -2,7 +2,7 @@
     <div class="container pt-5">
       <div class="row row-content">
         <div class="col-md-6">
-          <h1 class="logo-brand">Wijaya <span>Book</span></h1>
+          <h1 class="logo-brand">Books <span>Library</span></h1>
           <p>Lorem ipsum dolor sit amet</p>
         </div>
         <div class="col-md-3 mt-4 mt-sm-0">
@@ -17,13 +17,13 @@
         </div>
         <div class="col-md-3 mt-4 mt-sm-0">
           <h3 class="mb-3">Company</h3>
-          <a href="#">wjy@example.com</a>
+          <a href="#">bl@example.com</a>
           <p>Jln. Kartodarmo, Tulungagung Indonesia</p>
         </div>
       </div>
       <div class="row row-copy mt-4 mt-sm-0">
         <div class="col-md-6">
-          <p>&copy; 2024 WijayaBook. All rights reserved.</p>
+          <p>&copy; 2024 BooksLibrary. All rights reserved.</p>
         </div>
         <div class="col-md-6 text-sm-end">
           <a href="#"><i class='bx bxl-instagram-alt' ></i></a>

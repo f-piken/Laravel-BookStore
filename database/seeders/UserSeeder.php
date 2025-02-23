@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Customer;
-use App\Models\Seller;
+use App\Models\viewer;
+use App\Models\editor;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -26,28 +26,28 @@ class UserSeeder extends Seeder
         ]);
 
         // Sales User
-        $seller = User::create([
-            'name' => 'Seller User',
-            'email' => 'seller@gmail.com',
+        $editor = User::create([
+            'name' => 'Editor User',
+            'email' => 'editor@gmail.com',
             'password' => Hash::make('password123'),
-            'role' => 'seller',
+            'role' => 'editor',
             'photo' => 'images/default.jpg',
         ]);
 
-        // Customer User
-        $customer = User::create([
-            'name' => 'Customer User',
-            'email' => 'customer@gmail.com',
+        // viewer User
+        $viewer = User::create([
+            'name' => 'Viewer User',
+            'email' => 'viewer@gmail.com',
             'password' => Hash::make('password123'),
-            'role' => 'customer',
+            'role' => 'viewer',
             'photo' => 'images/default.jpg',
         ]);
 
-        Customer::create([
-            'user_id'=>$customer->id,
+        viewer::create([
+            'user_id'=>$viewer->id,
         ]);
-        Seller::create([
-            'user_id'=>$seller->id,
+        editor::create([
+            'user_id'=>$editor->id,
         ]);
     }
 }

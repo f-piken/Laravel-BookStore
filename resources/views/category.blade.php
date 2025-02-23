@@ -50,7 +50,7 @@
     }
     // Fungsi untuk mengambil dan menampilkan produk berdasarkan kategori
     function fetchProductsByCategory(categoryId) {
-        let url = categoryId === 0 ? '/api/products/all' : `/api/products/category/${categoryId}`;
+        let url = categoryId === 0 ? '/api/books/all' : `/api/books/category/${categoryId}`;
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -72,13 +72,10 @@
                                 <a href="/product/${product.id}">
                                     <img src="${window.location.origin}/storage/${product.image}" alt="${product.name}" class="img-fluid">
                                 </a>
-                                <h3 class="product-name mt-3">${product.name}</h3>
-                                <div class="rating">
-                                    ${generateStars(product.rate)}
-                                </div>
-                                <div class="detail d-flex justify-content-between align-items-center mt-4">
-                                    <p class="price">IDR ${product.price}</p>
-                                    <a href="/product/${product.id}" class="btn-cart"><i class="bx bx-cart-alt"></i></a>
+                                <h3 class="product-name mt-3">${product.judul}</h3>
+                                <div class="detail justify-content-between align-items-center mt-4">
+                                    <p class="penulis">${product.penulis}</p>
+                                    <p class="tahun">Tahun ${product.tahun_terbit}</p>
                                 </div>
                             </div>
                         `;

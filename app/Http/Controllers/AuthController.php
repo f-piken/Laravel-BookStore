@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Customer;
-use App\Models\Seller;
+use App\Models\Viewer;
+use App\Models\Editor;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
 use Illuminate\Http\Request;
@@ -32,8 +32,8 @@ class AuthController extends Controller
 
             if ($user->role === 'admin') {
                 return redirect()->route('admin-dashboard.index')->with('success', 'Login berhasil sebagai Admin!');
-            } elseif ($user->role === 'seller') {
-                return redirect()->route('home')->with('success', 'Login berhasil sebagai Seller!');
+            } elseif ($user->role === 'editor') {
+                return redirect()->route('home')->with('success', 'Login berhasil sebagai editor!');
             } else {
                 return redirect()->route('home')->with('success', 'Login berhasil!');
             }
@@ -65,12 +65,12 @@ class AuthController extends Controller
             'role' => $request->role,
         ]);
 
-        if($request->role == 'seller'){
-            Seller::create([
+        if($request->role == 'editor'){
+            Editor::create([
                 'user_id' => $user->id,
             ]);
         }else{
-            Customer::create([
+            Viewer::create([
                 'user_id' => $user->id,
             ]);
         }

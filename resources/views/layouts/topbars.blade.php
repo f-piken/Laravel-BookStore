@@ -9,11 +9,11 @@
         <!-- Pencarian -->
         @php
             $action = match($currentPage ?? '') {
-                'categories' => route('categories.index'),
-                'products' => route('products.index'),
-                'orders' => route('orders.index'),
-                'sellers' => route('sellers.data'),
-                'customers' => route('customers.data'),
+                'admin-categories' => route('admin-categories.index'),
+                'admin-books' => route('admin-books.index'),
+                'admin-users' => route('admin-users.index'),
+                'admin-editors' => route('admin-editors.data'),
+                'admin-viewers' => route('admin-viewers.data'),
                 default => '#',
             };
         @endphp
@@ -28,7 +28,7 @@
         <!-- Menu Pengguna -->
         <div class="dropdown">
             <button class="btn btn-sm btn-light dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="{{ asset( 'storage/' . Auth::user()->photo) }}" alt="" class="icon"> {{ Auth::user()->name ?? 'Guest' }}
+                <img src="{{ Auth::user()->photo ? asset('storage/' . Auth::user()->photo) : asset('images/default_profile.jpg') }}" alt="" class="icon"> {{ Auth::user()->name ?? 'Guest' }}
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                 {{-- <li><a class="dropdown-item" href="/profile">Profil</a></li>

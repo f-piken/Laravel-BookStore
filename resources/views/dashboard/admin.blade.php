@@ -22,11 +22,7 @@
                     
                         <div class="row mb-3">
                             <div class="col-md-4">
-                                @if($user->photo)
-                                    <img src="{{ asset('storage/' . $user->photo) }}" alt="Foto Profil" class="rounded-circle img-fluid" width="150" style="border: #B4D51E 2px solid;">
-                                @else
-                                    <img src="https://via.placeholder.com/150" alt="Foto Profil" class="rounded-circle img-fluid" width="150">
-                                @endif
+                                    <img src="{{ Auth::user()->photo ? asset('storage/' . Auth::user()->photo) : asset('images/default_profile.jpg') }}" alt="Foto Profil" class="rounded-circle img-fluid" width="150" style="border: #B4D51E 2px solid;">
                             </div>
                             <div class="col-md-8">
                                 <div class="mb-3">

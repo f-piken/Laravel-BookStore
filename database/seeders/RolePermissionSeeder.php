@@ -9,18 +9,18 @@ class RolePermissionSeeder extends Seeder
 {
     public function run()
     {
-        $user = User::find(1); // Ambil pengguna berdasarkan ID atau kriteria lainnya
-        $seller = User::find(2); // Ambil pengguna berdasarkan ID atau kriteria lainnya
-        $customer = User::find(3); // Ambil pengguna berdasarkan ID atau kriteria lainnya
+        $user = User::find(1);
+        $editor = User::find(2);
+        $viewer = User::find(3);
     
         // Cek apakah role sudah ada, jika belum buat role
         Role::firstOrCreate(['name' => 'admin']);
-        Role::firstOrCreate(['name' => 'customer']);
-        Role::firstOrCreate(['name' => 'seller']);
+        Role::firstOrCreate(['name' => 'viewer']);
+        Role::firstOrCreate(['name' => 'editor']);
 
         $user->assignRole('admin');
-        $seller->assignRole('seller');
-        $customer->assignRole('customer');
+        $editor->assignRole('editor');
+        $viewer->assignRole('viewer');
     }
 }
 
